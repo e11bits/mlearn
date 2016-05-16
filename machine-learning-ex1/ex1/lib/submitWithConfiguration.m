@@ -47,12 +47,12 @@ function [email token] = promptToken(email, existingToken, tokenFile)
     if (isempty(reenter) || reenter(1) == 'Y' || reenter(1) == 'y')
       token = existingToken;
       return;
-    else
+    elseinput('Login (email address): ', 's');
       delete(tokenFile);
     end
   end
-  email = input('Login (email address): ', 's');
-  token = input('Token: ', 's');
+  email = 'Alexander@Lazarevic.de';
+  token = '9nCWhIQm6RVqG8Ex';
 end
 
 function isValid = isValidPartOptionIndex(partOptions, i)
