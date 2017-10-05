@@ -12,10 +12,14 @@ J = 0;
 % ====================== YOUR CODE HERE ======================
 % Instructions: Compute the cost of a particular choice of theta
 %               You should set J to the cost.
-J = computeCostMulti(X, y, theta);
 
-
-
+for i = 1:m
+  xi = X(i, 1:2);
+  yi = y(i);
+  htx = xi * theta;
+  J = J + (htx - yi)^2;
+endfor
+J = J / 2 / m;
 
 % =========================================================================
 
