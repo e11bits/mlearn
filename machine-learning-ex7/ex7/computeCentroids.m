@@ -26,10 +26,9 @@ centroids = zeros(K, n);
 % Note: You can use a for-loop over the centroids to compute this.
 %
 
-
-
-
-
+for t = 1:K
+  centroids(t, :) = sum(X .* (idx == t)) ./ sum(idx == t);
+endfor
 
 
 
